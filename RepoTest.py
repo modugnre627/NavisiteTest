@@ -35,9 +35,14 @@ def depo_list(num_of_repos, search_string):
         print('We failed to reach a server.')
         print('Reason: ', e.reason)
     else:
-        the_page = response.read()
-        print(the_page)
+        repo_data = json.loads(response.readall().decode('utf-8'))
+        
+        
     
+    
+
+    print(repo_data)
+
     
 
 
